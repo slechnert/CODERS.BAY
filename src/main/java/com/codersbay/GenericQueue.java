@@ -1,6 +1,5 @@
 package com.codersbay;
 
-import java.util.EmptyStackException;
 
 public class GenericQueue<E> {
 
@@ -26,26 +25,26 @@ public class GenericQueue<E> {
       }
    }
 
-   public E dequeue() {
+   public E dequeue() throws EmptyQueueException {
       GenericQueueElement<E> oldFront = front;
       if (size == 0) {
-         throw new EmptyStackException();
+         throw new EmptyQueueException("Queue is empty!");
       }
       front = front.getNext();
       size--;
       return oldFront.getValue();
    }
 
-   public E peekFront() {
+   public E peekFront() throws EmptyQueueException {
       if (size == 0) {
-         throw new EmptyStackException();
+         throw new EmptyQueueException("Queue is empty!");
       }
       return front.getValue();
    }
 
-   public E peekRear() {
+   public E peekRear() throws EmptyQueueException {
       if (size == 0) {
-         throw new EmptyStackException();
+         throw new EmptyQueueException("Queue is empty!");
       }
       return rear.getValue();
    }
