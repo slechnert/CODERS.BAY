@@ -26,7 +26,7 @@ public class GenericQueueTest {
 
     @Test
     @DisplayName("PeekFront() returns the value of the element in the front")
-    public void peekFrontStringTest() {
+    public void peekFrontStringTest() throws EmptyQueueException {
         GenericQueue<String> testQueue = new GenericQueue<String>();
         testQueue.enqueue("HURRAAAAY");
         testQueue.enqueue("Momoooooo");
@@ -35,7 +35,7 @@ public class GenericQueueTest {
 
     @Test
     @DisplayName("PeekRear() returns the value of the element in the back")
-    public void peekRearStringTest() {
+    public void peekRearStringTest() throws EmptyQueueException {
         GenericQueue<String> testQueue = new GenericQueue<String>();
         testQueue.enqueue("HURRAAAAY");
         testQueue.enqueue("Momoooooo");
@@ -44,7 +44,7 @@ public class GenericQueueTest {
 
     @Test
     @DisplayName("Dequeue() returns and removes the element in the front")
-    public void dequeueStringTest() {
+    public void dequeueStringTest() throws EmptyQueueException {
         GenericQueue<String> testQueue = new GenericQueue<String>();
         testQueue.enqueue("HURRAAAAY");
         testQueue.enqueue("Momoooooo");
@@ -71,7 +71,7 @@ public class GenericQueueTest {
 
     @Test
     @DisplayName("PeekFront() returns the value of the element in the front")
-    public void peekFrontIntegerTest() {
+    public void peekFrontIntegerTest() throws EmptyQueueException {
         GenericQueue<Integer> testQueue = new GenericQueue<Integer>();
         testQueue.enqueue(1);
         testQueue.enqueue(2);
@@ -80,7 +80,7 @@ public class GenericQueueTest {
 
     @Test
     @DisplayName("PeekRear() returns the value of the element in the back")
-    public void peekRearIntegerTest() {
+    public void peekRearIntegerTest() throws EmptyQueueException {
         GenericQueue<Integer> testQueue = new GenericQueue<Integer>();
         testQueue.enqueue(1);
         testQueue.enqueue(2);
@@ -89,7 +89,7 @@ public class GenericQueueTest {
 
     @Test
     @DisplayName("Dequeue() returns and removes the element in the front")
-    public void dequeueIntegerTest() {
+    public void dequeueIntegerTest() throws EmptyQueueException {
         GenericQueue<Integer> testQueue = new GenericQueue<Integer>();
         testQueue.enqueue(1);
         testQueue.enqueue(2);
@@ -116,7 +116,7 @@ public class GenericQueueTest {
 
     @Test
     @DisplayName("PeekFront() returns the value of the element in the front")
-    public void peekFrontBooleanTest() {
+    public void peekFrontBooleanTest() throws EmptyQueueException {
         GenericQueue<Boolean> testQueue = new GenericQueue<Boolean>();
         testQueue.enqueue(true);
         testQueue.enqueue(false);
@@ -125,7 +125,7 @@ public class GenericQueueTest {
 
     @Test
     @DisplayName("PeekRear() returns the value of the element in the back")
-    public void peekRearBooleanTest() {
+    public void peekRearBooleanTest() throws EmptyQueueException {
         GenericQueue<Boolean> testQueue = new GenericQueue<Boolean>();
         testQueue.enqueue(true);
         testQueue.enqueue(false);
@@ -134,7 +134,7 @@ public class GenericQueueTest {
 
     @Test
     @DisplayName("Dequeue() returns and removes the element in the front")
-    public void dequeueBooleanTest() {
+    public void dequeueBooleanTest() throws EmptyQueueException {
         GenericQueue<Boolean> testQueue = new GenericQueue<Boolean>();
         testQueue.enqueue(true);
         testQueue.enqueue(false);
